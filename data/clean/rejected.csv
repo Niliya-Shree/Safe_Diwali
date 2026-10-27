@@ -1,0 +1,16 @@
+S No,Registration Number,Name of manufacturer,Address of manufacturer,Country,Product name,IS number,Date of grant of licence,Status,Validity,Scope of licence,Brand,reject_reason
+,,,,,,,,,,,,bad_reg_format
+Deferred,,,,,,,,,,,,bad_reg_format
+Expired,,,,,,,,,,,,bad_reg_format
+Registered,,,,,,,,,,,,bad_reg_format
+,,,,,,,,,,,,bad_reg_format
+IS 10322 (Part 5/Sec 3) : 2012,,,,,,,,,,,,bad_reg_format
+IS 10322 (Part 5/Sec 3) : 2026,,,,,,,,,,,,bad_reg_format
+IS 10322 (Part 5/Sec 7) : 2017 / IEC 60598-2-20 : 2014,,,,,,,,,,,,bad_reg_format
+IS 10322 (Part 5/Sec 7) : 2026,,,,,,,,,,,,bad_reg_format
+IS 10322 (Part 5/Sec 8) : 2013,,,,,,,,,,,,bad_reg_format
+IS 10322 (Part 5/Sec 8) : 2026,,,,,,,,,,,,bad_reg_format
+IS 16102 (Part 1) : 2012,,,,,,,,,,,,bad_reg_format
+IS 16102 (Part 1) : 2026,,,,,,,,,,,,bad_reg_format
+IS 16103 (Part 1) : 2012,,,,,,,,,,,,bad_reg_format
+IS 16103 (Part 1): 2025/ IEC 62031: 2018,,,,,,,,,,,,bad_reg_format

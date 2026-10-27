@@ -15,6 +15,9 @@ def d(s):
 
 def main(path):
     df = pd.read_csv(path, dtype=str, keep_default_na=False)
+    is_data_row = df["S No"].str.strip().str.fullmatch(r"\d+")
+    print(f"non-data rows skipped={int((~is_data_row).sum())}")
+    df = df[is_data_row]
     rows, rejects, seen = [], [], set()
     for _, r in df.iterrows():
         reg = canonical_reg(r["Registration Number"])
@@ -45,8 +48,9 @@ def main(path):
            status, brands, source_sn, raw, collected_on)
           VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
           ON CONFLICT (reg_number_norm) DO UPDATE SET
-            status=EXCLUDED.status, valid_to=EXCLUDED.valid_to,
-            raw=EXCLUDED.raw, last_verified_at=now()""", rows)
+          status=EXCLUDED.status, valid_to=EXCLUDED.valid_t  o,
+          category=EXCLUDED.category, brands=EXCLUDED.bran  ds,
+          raw=EXCLUDED.raw, last_verified_at=now()""", rows)
     pd.DataFrame(rejects).to_csv("data/clean/rejected.csv", index=False)
     print(f"loaded={len(rows)} rejected={len(rejects)}")
     if rejects:

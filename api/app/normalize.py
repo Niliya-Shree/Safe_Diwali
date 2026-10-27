@@ -26,5 +26,8 @@ def parse_is(s: str):
 # Isse pehle tumhari unique IS list se verify karo, phir bharo.
 CATEGORY = {
     "IS10322-P5-S7": "lighting_chain",
+    "IS10322-P5-S3": "street_light",
+    "IS10322-P5-S8": "emergency_light",
     "IS16102-P1": "led_lamp",
+    "IS16103-P1": "led_module",
 }
